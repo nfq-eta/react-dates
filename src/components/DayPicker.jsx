@@ -56,7 +56,6 @@ const propTypes = forbidExtraProps({
   hideKeyboardShortcutsPanel: PropTypes.bool,
   daySize: nonNegativeInteger,
   isRTL: PropTypes.bool,
-  isYearsEnabled: PropTypes.bool,
 
   // navigation props
   navPrev: PropTypes.node,
@@ -102,7 +101,6 @@ export const defaultProps = {
   hideKeyboardShortcutsPanel: false,
   daySize: DAY_SIZE,
   isRTL: false,
-  isYearsEnabled: false,
 
   // navigation props
   navPrev: null,
@@ -799,7 +797,6 @@ export default class DayPicker extends React.Component {
       monthFormat,
       daySize,
       isFocused,
-      isYearsEnabled,
       phrases,
     } = this.props;
 
@@ -884,7 +881,6 @@ export default class DayPicker extends React.Component {
             role="region"
             tabIndex={-1}
           >
-            {!verticalScrollable && !isYearsEnabled && this.renderNavigation()}
 
             <div
               className={transitionContainerClasses}
@@ -913,11 +909,9 @@ export default class DayPicker extends React.Component {
                 daySize={daySize}
                 firstDayOfWeek={firstDayOfWeek}
                 isFocused={shouldFocusDate}
-                isYearsEnabled={isYearsEnabled}
                 focusedDate={focusedDate}
                 phrases={phrases}
               />
-              {verticalScrollable && !isYearsEnabled && this.renderNavigation()}
             </div>
 
             {!isTouch && !hideKeyboardShortcutsPanel &&

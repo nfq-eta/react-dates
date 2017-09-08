@@ -50,7 +50,6 @@ const propTypes = forbidExtraProps({
   focusedDate: momentPropTypes.momentObj, // indicates focusable day
   isFocused: PropTypes.bool, // indicates whether or not to move focus to focusable day
   firstDayOfWeek: DayOfWeekShape,
-  isYearsEnabled: PropTypes.bool,
 
   // i18n
   monthFormat: PropTypes.string,
@@ -77,7 +76,6 @@ const defaultProps = {
   daySize: DAY_SIZE,
   focusedDate: null,
   isFocused: false,
-  isYearsEnabled: false,
   firstDayOfWeek: null,
 
   // i18n
@@ -218,7 +216,6 @@ export default class CalendarMonthGrid extends React.Component {
       firstDayOfWeek,
       focusedDate,
       isFocused,
-      isYearsEnabled,
       phrases,
     } = this.props;
 
@@ -276,7 +273,6 @@ export default class CalendarMonthGrid extends React.Component {
               daySize={daySize}
               focusedDate={isVisible ? focusedDate : null}
               isFocused={isFocused}
-              isYearsEnabled={isYearsEnabled}
               phrases={phrases}
             />
           );
