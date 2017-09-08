@@ -52,7 +52,6 @@ const propTypes = forbidExtraProps({
   firstDayOfWeek: DayOfWeekShape,
 
   // i18n
-  monthFormat: PropTypes.string,
   phrases: PropTypes.shape(getPhrasePropTypes(CalendarDayPhrases)),
 });
 
@@ -79,7 +78,6 @@ const defaultProps = {
   firstDayOfWeek: null,
 
   // i18n
-  monthFormat: 'MMMM YYYY', // english locale
   phrases: CalendarDayPhrases,
 };
 
@@ -203,7 +201,6 @@ export default class CalendarMonthGrid extends React.Component {
       isAnimating,
       modifiers,
       numberOfMonths,
-      monthFormat,
       orientation,
       transformValue,
       daySize,
@@ -260,7 +257,6 @@ export default class CalendarMonthGrid extends React.Component {
               isVisible={isVisible}
               enableOutsideDays={enableOutsideDays}
               modifiers={modifiers[monthString]}
-              monthFormat={monthFormat}
               orientation={orientation}
               onDayMouseEnter={onDayMouseEnter}
               onDayMouseLeave={onDayMouseLeave}

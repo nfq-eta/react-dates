@@ -71,7 +71,6 @@ const defaultProps = {
   isFocused: false,
 
   // i18n
-  monthFormat: 'MMMM YYYY', // english locale
   phrases: CalendarDayPhrases,
 };
 

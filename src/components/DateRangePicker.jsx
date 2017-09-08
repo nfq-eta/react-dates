@@ -93,7 +93,6 @@ const defaultProps = {
 
   // internationalization
   displayFormat: () => moment.localeData().longDateFormat('L'),
-  monthFormat: 'MMMM YYYY',
   phrases: DateRangePickerPhrases,
 };
 
@@ -293,7 +292,6 @@ export default class DateRangePicker extends React.Component {
       isOutsideRange,
       numberOfMonths,
       orientation,
-      monthFormat,
       renderMonth,
       navPrev,
       navNext,
@@ -350,7 +348,6 @@ export default class DateRangePicker extends React.Component {
           focusedInput={focusedInput}
           startDate={startDate}
           endDate={endDate}
-          monthFormat={monthFormat}
           renderMonth={renderMonth}
           withPortal={withPortal || withFullScreenPortal}
           daySize={daySize}

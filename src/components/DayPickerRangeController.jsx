@@ -78,7 +78,6 @@ const propTypes = forbidExtraProps({
   showKeyboardShortcuts: PropTypes.bool,
 
   // i18n
-  monthFormat: PropTypes.string,
   phrases: PropTypes.shape(getPhrasePropTypes(DayPickerPhrases)),
 
   isRTL: PropTypes.bool,
@@ -128,7 +127,6 @@ const defaultProps = {
   showKeyboardShortcuts: false,
 
   // i18n
-  monthFormat: 'MMMM YYYY',
   phrases: DayPickerPhrases,
 
   isRTL: false,
@@ -850,7 +848,6 @@ export default class DayPickerRangeController extends React.Component {
     const {
       numberOfMonths,
       orientation,
-      monthFormat,
       renderMonth,
       navPrev,
       navNext,
@@ -886,7 +883,6 @@ export default class DayPickerRangeController extends React.Component {
         onMonthChange={this.onMonthChange}
         onYearChange={this.onYearChange}
         onMultiplyScrollableMonths={this.onMultiplyScrollableMonths}
-        monthFormat={monthFormat}
         renderMonth={renderMonth}
         withPortal={withPortal}
         hidden={!focusedInput}

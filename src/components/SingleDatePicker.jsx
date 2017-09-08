@@ -88,7 +88,6 @@ const defaultProps = {
 
   // internationalization props
   displayFormat: () => moment.localeData().longDateFormat('L'),
-  monthFormat: 'MMMM YYYY',
   phrases: SingleDatePickerPhrases,
 };
 
@@ -311,7 +310,6 @@ export default class SingleDatePicker extends React.Component {
       enableOutsideDays,
       numberOfMonths,
       orientation,
-      monthFormat,
       navPrev,
       navNext,
       onPrevMonthClick,
@@ -352,7 +350,6 @@ export default class SingleDatePicker extends React.Component {
           orientation={orientation}
           enableOutsideDays={enableOutsideDays}
           numberOfMonths={numberOfMonths}
-          monthFormat={monthFormat}
           withPortal={withPortal || withFullScreenPortal}
           focused={focused}
           keepOpenOnDateSelect={keepOpenOnDateSelect}

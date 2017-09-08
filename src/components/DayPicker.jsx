@@ -83,7 +83,6 @@ const propTypes = forbidExtraProps({
   showKeyboardShortcuts: PropTypes.bool,
 
   // internationalization
-  monthFormat: PropTypes.string,
   phrases: PropTypes.shape(getPhrasePropTypes(DayPickerPhrases)),
 });
 
@@ -128,7 +127,6 @@ export const defaultProps = {
   showKeyboardShortcuts: false,
 
   // internationalization
-  monthFormat: 'MMMM YYYY',
   phrases: DayPickerPhrases,
 };
 
@@ -794,7 +792,6 @@ export default class DayPicker extends React.Component {
       renderCalendarInfo,
       hideKeyboardShortcutsPanel,
       onOutsideClick,
-      monthFormat,
       daySize,
       isFocused,
       phrases,
@@ -905,7 +902,6 @@ export default class DayPicker extends React.Component {
                 renderMonth={renderMonth}
                 renderDay={renderDay}
                 onMonthTransitionEnd={this.updateStateAfterMonthTransition}
-                monthFormat={monthFormat}
                 daySize={daySize}
                 firstDayOfWeek={firstDayOfWeek}
                 isFocused={shouldFocusDate}
